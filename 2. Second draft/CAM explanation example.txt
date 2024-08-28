@@ -1,0 +1,30 @@
+The EigenCam interpretation of the prediction made by the trained YOLO model is illustrated in Figure 7. The bounding box effectively encloses the polyp within 
+the image, thus signifying that the model has identified and localized the polyp accurately. The highlighted region in the EigenCam visualization indicates which 
+specific areas of the input image the model concentrated on in order to generate its prediction.
+
+The EigenCam highlights are indicative of the regions that made the most significant contribution to the decision-making process of the model. When the highlighted 
+region corresponds precisely to the location of the polyp within the bounding box, it indicates that the model has accurately detected the pertinent visual 
+characteristics and patterns that are linked to polyps. By overlaying the EigenCam visualization on the input image, researchers can gain valuable insights into 
+the model's decision-making process. This helps explain why the model made a particular prediction and provides a level of transparency and interpretability that 
+is often lacking in traditional deep learning models. In addition, the precise correspondence observed between the EigenCam highlight and the predicted bounding box 
+signifies that the model has acquired significant polyp representations throughout the training phase. This enhances the model's capability to reliably detect polyps 
+in real-world scenarios and generalize effectively to new, unobserved data.
+
+To summarize, the YOLO model's prediction is visually represented in Figure 7 through the EigenCam interpretation, which emphasizes the relevant regions in the 
+input image that played an important part in the precise localization and detection of the polyps. By implementing this XAI technique, significant insights 
+can be gained regarding the decision-making process of the model. Transparency and interpretability are essential factors in establishing confidence in AI systems, 
+particularly when it comes to sensitive medical applications.
+
+
+****************************
+In this section, we have used Grad-CAM (Gradient-weighted Class
+Activation Mapping) to get a heat map of where pneumonia is most
+likely to manifest itself (Selvaraju et al., 2017). This technique employs
+the gradient of a target notion to produce ‘‘visual explanations’’ for
+CNN models. We have generated a crude localization map using GradCAM, showing us where we need to focus on our prediction-conception
+image. While classifying the six classes, the gradients of the final
+convolutional layer emphasize the chest X-ray accurately recognized
+by the filters and represented in the feature maps. The Grad-CAM
+visualization of the different classes has been shown in Fig. 11. From
+the visualization, it is observed that the lightweight ChestX-Ray6 model
+correctly detects the affected region of various lung-related diseases.
